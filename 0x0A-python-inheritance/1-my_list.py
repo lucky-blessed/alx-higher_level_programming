@@ -1,13 +1,19 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """
-   Defines an inherited  list class MyList.
+Module for Task 1.
 """
+
 
 class MyList(list):
     """
-        Implementatio of sorted printing for the built-in list class.
+    A class that inherits from list and provides additional functionality.
     """
 
     def print_sorted(self):
-        """Print  a list in sorted ascending order."""
+        """
+        Prints the list in ascending order.
+
+        Returns:
+            None
+        """
         print(sorted(self))

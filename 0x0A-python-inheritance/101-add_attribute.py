@@ -1,22 +1,17 @@
 #!/usr/bin/python3
-"""
-Module for Task 13.
-"""
+"""Defines a function that adds attributes to objects."""
 
 
-def add_attribute(obj, attribute, value):
-    """
-    Adds a new attribute to an object if it's possible.
+def add_attribute(obj, att, value):
+    """Add a new attribute to an object if possible.
 
     Args:
-        obj: The object to which the attribute should be added.
-        attribute: The name of the new attribute.
-        value: The value of the new attribute.
-
+        obj (any): The object to add an attribute to.
+        att (str): The name of the attribute to add to obj.
+        value (any): The value of att.
     Raises:
-        TypeError: If the object can't have a new attribute.
+        TypeError: If the attribute cannot be added.
     """
-    if hasattr(obj, '__dict__') or (hasattr(obj, '__slots__') and attribute in obj.__slots__):
-        setattr(obj, attribute, value)
-    else:
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
+    setattr(obj, att, value)

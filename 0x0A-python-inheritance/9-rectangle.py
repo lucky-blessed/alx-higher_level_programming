@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+
 """
 Module for Task 9.
 """
+
 
 class BaseGeometry:
     """
@@ -19,7 +21,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-        Validates the value and raises exceptions if it doesn't meet the criteria.
+        Validates value, raises exceptions if it doesn't meet the criteria.
 
         Args:
             name: A string representing the name of the value.
